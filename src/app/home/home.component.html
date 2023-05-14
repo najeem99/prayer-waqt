@@ -1,66 +1,27 @@
  <div class="main-parent">
     <div class="row main-div">
         <div class="col-md-4 left-portion">
-            <div class="container"> 
-               <div class="row">
-                <div class="col-12 row">
-                    <div class="col-12 time-fullcard time-name">
-                        Times
+            <div class="container d-flex justify-content-center align-items-center">
+               <div class="row  d-flex justify-content-center">
+                <div class="col-12 row ">
+                    <h1 class="col-12 time-title time-name">
+                        Waqt   وقت
+                    </h1>
+                </div>
+                <div *ngFor="let pt of prayerTimes" class="col-12 row  time-fullcard  " [ngClass]="pt.isUpcoming == true ? 'upcoming':''" >
+                    <div class="col-md-6   time-name ">
+                        {{pt.prayerTimeName}}
+                    </div>
+                    <div class="col-md-6  time-number ">
+                        {{pt.prayerTime}}
                     </div>
                 </div>
-                <div class="col-12 row upcoming">
-                    <div class="col-md-6 time-fullcard  time-name">
-                        Fajr
-                    </div> 
-                    <div class="col-md-6 time-fullcard time-number">
-                        20:45
-                    </div>
-                </div>
-                <div class="col-12  row">
-                    <div class="col-md-6 time-fullcard time-name">
-                        Sunrise
-                    </div> 
-                    <div class="col-md-6 time-fullcard time-number">
-                        20:45
-                    </div>
-                </div>
-                <div class="col-12  row">
-                    <div class="col-md-6 time-fullcard time-name">
-                        Dhuhr
-                    </div> 
-                    <div class="col-md-6 time-fullcard time-number">
-                        20:45
-                    </div>
-                </div>
-                <div class=" col-12 row">
-                    <div class="col-md-6 time-fullcard time-name">
-                        Asr
-                    </div> 
-                    <div class="col-md-6 time-fullcard time-number">
-                        20:45
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 time-fullcard time-name">
-                        Maghrib
-                    </div> 
-                    <div class="col-md-6 time-fullcard time-number">
-                        20:45
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 time-fullcard time-name">
-                        Isha
-                    </div> 
-                    <div class="col-md-6 time-fullcard time-number">
-                        20:45
-                    </div>
-                </div>
+
 
                </div>
             </div>
         </div>
-        <div class="col-md-8 right-portion">
+        <div class="col-md-7 right-portion">
             <div class="container right-portion">
 <div class="current-time">
     <p>{{today | date:'mediumTime'}} </p>

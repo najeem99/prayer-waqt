@@ -1,32 +1,65 @@
+.container{
+  height: 100%;
+}
 .right-portion{
  }
 .left-portion{
- background-image: url("../../assets/images/arch.png");
- background-size: contain;
- background-repeat: no-repeat;
+margin: 50px 35px 0px 35px;
+ height: auto;
+ z-index: 1;
+border-radius: 550px 550px 0 0;
+ box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+background: linear-gradient(to bottom,  rgba(255,215,0,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
 }
 .main-div{
     height: 100vh;
     width: 100%;
     // overflow: hidden;
-    
+
     background-image: url("data:image/svg+xml,<svg id='patternId'  xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='69.282' height='40' patternTransform='scale(1) rotate(70)'><rect x='0' y='0' fill='hsla(0, 0%, 100%, 1)'/><path d='M34.641-20v80m34.64-40L0-20m69.282 80L0 20m69.282 0L0 60m69.282-80L0 20m69.282-40v80M0-20v80M34.64 40l11.547-20m11.547 20l11.547 20M34.641 40h23.094m11.547-20L57.735 40M46.188 20L34.641 40l11.547 20h23.094L80.83 40 69.282 20H46.188zM34.641 40l11.547-20m11.547 20l11.547 20M34.641 40h23.094m11.547-20L57.735 40M46.188 20L34.641 40l11.547 20h23.094L80.83 40 69.282 20H46.188zM34.641 0l11.547-20M57.735 0l11.547 20M34.642 0h23.093m11.547-20L57.735 0M46.188-20L34.641 0l11.547 20h23.094L80.83 0 69.282-20H46.188zM34.641 40L23.094 20M11.547 40L0 60m34.64-20H11.548M0 20l11.547 20m11.547-20l11.547 20-11.547 20H0l-11.547-20L0 20h23.094zM34.641 0L23.094-20M11.547 0L0 20M34.64 0H11.548M0-20L11.547 0m11.547-20L34.641 0 23.094 20H0L-11.547 0 0-20h23.094z'  stroke-width='1' stroke='hsla(0, 0%, 0%, 0.14)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(-46,0)' fill='url(%23a)'/></svg>")
 }
+.time-title{
+
+  font-family: 'Konkhmer Sleokchher', cursive;
+  text-align: center;
+  font-size: 50px;
+}
 .time-fullcard{
+
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    width: 80%;
+    background-color: #00000023;
+    margin: 10px;
     font-family: 'Konkhmer Sleokchher', cursive;
     text-align: center;
-    font-size: 4.5rem;
+    font-size: 50px;
 }
 .time-name{
-   
+
 }
 .time-number{
-   
+
 }
-.upcoming{
-    background-color: #00000023;
+.upcoming {
+    background-color: #000000cb;
+    background-position-x: 10px;
+    width: 80%;
+    font-weight: 600;
+    color: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    animation: blinker 1s linear infinite;
+
 }
 
+
+@keyframes blinker {
+  50% {
+    background-color: #0000009c;
+   }
+
+}
 //right
 .right-portion{
     display: flex;
