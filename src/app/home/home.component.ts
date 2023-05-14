@@ -7,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+   today: number = Date.now();
 
+  constructor() {
+      setInterval(() => {this.today = Date.now()}, 1);
+  }
   ngOnInit(): void {
   }
 
