@@ -4,11 +4,11 @@
             <div class="container d-flex justify-content-center align-items-center">
                <div class="row  d-flex justify-content-center">
                 <div class="col-12 row ">
-                    <h1 class="col-12 time-title time-name">
+                    <h1 class="col-12 time-title time-name pt-5 pb-5">
                         Waqt   وقت
                     </h1>
                 </div>
-                <div *ngFor="let pt of prayerTimes" class="col-12 row  time-fullcard  " [ngClass]="pt.isUpcoming == true ? 'upcoming':''" >
+                <div *ngFor="let pt of prayerTimes" class="col-12 row  pt-1 time-fullcard  " [ngClass]="pt.isUpcoming == true ? 'upcoming':''" >
                     <div class="col-md-6   time-name ">
                         {{pt.prayerTimeName}}
                     </div>
@@ -27,7 +27,17 @@
     <p>{{today | date:'mediumTime'}} </p>
     <p class="current-date">{{today | date:'longDate'}}</p>
 </div>
+<div class="time-remaining d-flex align-items-center justify-content-between">
+  <p>    {{prayerTimes[0].prayerTimeName | uppercase}}</p>
+  <p>   {{(today | date:'ss')}} </p>
+
+</div>
             </div>
         </div>
     </div>
+<div class="footer-message iso-marquee-linkwrap">
+  <div class="iso-marquee--long iso-marquee" style="--tw:145ch; --ad:28s;">
+    <span>Abu Huraira reported Allah's Messenger (may peace be upon him) as saying: Whenever you sight the new moon (of the month of Ramadan) observe fast </span>
+ </div></div>
+
  </div>

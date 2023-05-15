@@ -8,19 +8,19 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
    prayerTimes:any = []
    today: number = Date.now();
-    i = 0
+    i = 3
   constructor() {
       setInterval(() => {this.today = Date.now()
-        this.prayerTimes.forEach((element:any,index:number) => {
-          if(index == this.i){
-            element.isUpcoming = true
-          }else{
-            element.isUpcoming = false
-          }
-        });
-      this.i = this.i  + 1;
-      if(this.i == 5)
-            this.i=0;
+      //   this.prayerTimes.forEach((element:any,index:number) => {
+      //     if(index == this.i){
+      //       element.isUpcoming = true
+      //     }else{
+      //       element.isUpcoming = false
+      //     }
+      //   });
+      // this.i = this.i  + 1;
+      // if(this.i == 5)
+      //       this.i=0;
       }, 1000);
   }
   ngOnInit(): void {
